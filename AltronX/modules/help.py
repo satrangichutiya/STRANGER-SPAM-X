@@ -2,7 +2,7 @@ from config import MK1, MK2, MK3, MK4, MK5, MK6, MK7, MK8, MK9, MK10, SUDO_USERS
 from telethon import events, Button
 
 
-PythonHelp = f"★ 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗕𝗢𝗧 𝗛𝗘𝗟𝗣 𝗠𝗘𝗡𝗨 ★\n\n» **ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ**\n» **ᴅᴇᴠᴇʟᴏᴘᴇʀ: @SHIVANSHDEVS**"
+PythonHelp = f"★ GHOST 𝗕𝗢𝗧 𝗛𝗘𝗟𝗣 𝗠𝗘𝗡𝗨 ★\n\n» **ᴄʟɪᴄᴋ ᴏɴ ʙᴇʟᴏᴡ ʙᴜᴛᴛᴏɴ ғᴏʀ ʜᴇʟᴘ**\n» **ᴅᴇᴠᴇʟᴏᴘᴇʀ: @SATHYA_0P**"
 
 
 @MK1.on(events.NewMessage(incoming=True, pattern=r"\%shelp(?: |$)(.*)" % hl))
@@ -18,7 +18,7 @@ PythonHelp = f"★ 𝗦𝗧𝗥𝗔𝗡𝗚𝗘𝗥 𝗕𝗢𝗧 𝗛𝗘𝗟�
 async def help(event):
     if event.sender_id in SUDO_USERS:
        await event.client.send_file(event.chat_id,
-                               "https://telegra.ph/file/05522e13c97752efe5e75.png",
+                               "https://telegra.ph/file/1d3a03de33db3086fa412.png",
                                   caption=PythonHelp,
                                   buttons=[
            [
@@ -29,8 +29,8 @@ async def help(event):
             Button.inline("ᴇxᴛʀᴀ", data="extra"),
            ],
            [    
-            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/SHIVANSH474"),
-            Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/MASTIWITHFRIENDSXD")
+            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/TEST_V21"),
+            Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/TEST_V21")
            ],
            ],
            )
@@ -54,22 +54,22 @@ extra_msg = f"""
   2) {hl}leave : Type in the Group bot will auto leave that group
 
 
-**© @SHIVANSHDEVS**
+**© @SATHYA_0P**
 """
 
                  
 raid_msg = f"""
 **» ʀᴀɪᴅ ᴄᴏᴍᴍᴀɴᴅꜱ:**
 
-𝗥𝗮𝗶𝗱: ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴀɪᴅ ᴏɴ ᴀɴʏ ɪɴᴅɪᴠɪᴅᴜᴀʟ ᴜꜱᴇʀ ꜰᴏʀ ɢɪᴠᴇɴ ʀᴀɴɢᴇ.
+𝗥𝗮𝗶𝗱: KIS JHATHU PAR RAID ADD KARNI HAI YE BTA AUR RANGE BTA 
   1) {hl}raid <count> <username>
   2) {hl}raid <count> <reply to user>
 
-𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱: ᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ!!
+𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱: DONE BHAI ISKI GAAND FAADNA SHURU
   1) {hl}rraid <replying to user>
   2) {hl}rraid <username>
 
-𝗗𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱: ᴅᴇᴀᴄᴛɪᴠᴀᴛᴇꜱ ʀᴇᴘʟʏ ʀᴀɪᴅ ᴏɴ ᴛʜᴇ ᴜꜱᴇʀ!!
+𝗗𝗥𝗲𝗽𝗹𝘆𝗥𝗮𝗶𝗱: THEEK BHAI ISKO CHODDH DO YE MERA BETA HAIʀ!!
   1) {hl}drraid <replying to user>
   2) {hl}drraid <username>
 
@@ -86,7 +86,7 @@ raid_msg = f"""
   2) {hl}craid <count> <reply to user>
 
 
-**© @SHIVANSHDEVS**
+**© @SATHYA_0P**
 """
 
 spam_msg = f"""
@@ -99,11 +99,11 @@ spam_msg = f"""
 𝗣𝗼𝗿𝗻𝗦𝗽𝗮𝗺: ᴘᴏʀᴍᴏɢʀᴀᴘʜʏ ꜱᴘᴀᴍ.
   1) {hl}pspam <count>
 
-𝗛𝗮𝗻𝗴: ꜱᴘᴀᴍꜱ ʜᴀɴɢɪɴɢ ᴍᴇꜱꜱᴀɢᴇ ꜰᴏʀ ɢɪᴠᴇɴ ᴄᴏᴜɴᴛᴇʀ.
+𝗛𝗮𝗻𝗴: DHIYAN SE KARIYO SIR GROUP CHUD JAYEGA CHIPAK KR.
   1) {hl}hang <counter> (you can reply any message if you want bot to reply that message and do spamming)
 
 
-** © @SHIVANSHDEVS**
+** © @SATHYA_0P**
 """                     
            
            
@@ -130,13 +130,13 @@ async def helpback(event):
             Button.inline("ᴇxᴛʀᴀ", data="extra"),
            ],
            [
-            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/SHIVANSH474"),
-            Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/MASTIWITHFRIENDSXD")
+            Button.url("ᴄʜᴀɴɴᴇʟ", "https://t.me/TEST_V21"),
+            Button.url("sᴜᴘᴘᴏʀᴛ", "https://t.me/TEST_V21")
            ],
            ],
         )           
    else:
-        await event.answer("ᴘᴀʜʟᴇ ᴊᴀᴀᴋᴇ ᴘᴀᴘᴀ ʙᴏʟ sʜɪᴠᴀɴsʜ ᴋᴏ ᴡᴏ ᴛᴜᴍʜᴇ sᴜᴅᴏ ᴅᴇ ᴅᴇɢᴀ", cache_time=0, alert=True)
+        await event.answer("BEHEN LODE MADARCHOD SUDO CHAIYE TO @SATHYA_0P KA LODA CHOOSO WO SUDO DE DEGA", cache_time=0, alert=True)
 
 
 @MK1.on(events.CallbackQuery(pattern=r"spam"))
@@ -155,7 +155,7 @@ async def help_spam(event):
             buttons=[[Button.inline("< Back", data="help_back"),],],
             ) 
    else:
-        await event.answer("ᴘᴀʜʟᴇ ᴊᴀᴀᴋᴇ ᴘᴀᴘᴀ ʙᴏʟ sʜɪᴠᴀɴsʜ ᴋᴏ ᴡᴏ ᴛᴜᴍʜᴇ sᴜᴅᴏ ᴅᴇ ᴅᴇɢᴀ", cache_time=0, alert=True)
+        await event.answer("BEHEN LODE MADARCHOD SUDO CHAIYE TO @SATHYA_0P KA LODA CHOOSO WO SUDO DE DEGA", cache_time=0, alert=True)
 
 
 @MK1.on(events.CallbackQuery(pattern=r"raid"))
@@ -174,7 +174,7 @@ async def help_raid(event):
             buttons=[[Button.inline("< Back", data="help_back"),],],
             )  
      else:
-        await event.answer("ᴘᴀʜʟᴇ ᴊᴀᴀᴋᴇ ᴘᴀᴘᴀ ʙᴏʟ sʜɪᴠᴀɴsʜ ᴋᴏ ᴡᴏ ᴛᴜᴍʜᴇ sᴜᴅᴏ ᴅᴇ ᴅᴇɢᴀ", cache_time=0, alert=True)
+        await event.answer("BEHEN LODE MADARCHOD SUDO CHAIYE TO @SATHYA_0P KA LODA CHOOSO WO SUDO DE DEGA", cache_time=0, alert=True)
 
 
 @MK1.on(events.CallbackQuery(pattern=r"extra"))
