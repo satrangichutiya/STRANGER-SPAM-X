@@ -1,8 +1,8 @@
 import os
+import logging
 from telethon import TelegramClient
 from decouple import config
 from os import getenv
-import logging
 
 logging.basicConfig(
     format='[%(levelname) 5s/%(asctime)s] %(name)s: %(message)s',
@@ -10,13 +10,13 @@ logging.basicConfig(
 )
 
 # Basic values
-API_ID = 18136872
-API_HASH = "312d861b78efcd1b02183b2ab52a83a4"
-CMD_HNDLR = getenv("CMD_HNDLR", default=".")
-HEROKU_APP_NAME = config("HEROKU_APP_NAME", None)
-HEROKU_API_KEY = config("HEROKU_API_KEY", None)
+API_ID = config("API_ID", cast=int)
+API_HASH = config("API_HASH")
+CMD_HNDLR = getenv("CMD_HNDLR", ".")
+HEROKU_APP_NAME = config("HEROKU_APP_NAME", default=None)
+HEROKU_API_KEY = config("HEROKU_API_KEY", default=None)
 
-# Tokens
+# Bot Tokens (can be less than 10 — flexible)
 BOT_TOKENS = [
     config("BOT_TOKEN", default=None),
     config("BOT_TOKEN2", default=None),
@@ -30,23 +30,27 @@ BOT_TOKENS = [
     config("BOT_TOKEN10", default=None),
 ]
 
-# Sudo & Owner
-SUDO_USERS = list(map(int, getenv("SUDO_USER", "0").split()))
+# Filter out None tokens
+BOT_TOKENS = [token for token in BOT_TOKENS if token]
+
+# Owner & Sudo Users
+OWNER_ID = int(getenv("OWNER_ID", 0))
+SUDO_USERS = list(map(int, getenv("SUDO_USER", "").split()))
 SUDO_USERS += [6919199044, 6762113050, 6876910746]
 
-OWNER_ID = int(os.environ.get("OWNER_ID", 0))
-SUDO_USERS.append(OWNER_ID)
+if OWNER_ID:
+    SUDO_USERS.append(OWNER_ID)
 
-# DB
-DB_URI = config("DATABASE_URL", None)
+# Database URI
+DB_URI = config("DATABASE_URL", default=None)
 
-# Clients (Initialized only — actual start will happen asynchronously)
+# Initialize Clients (don't start yet)
 clients = []
-for i in range(len(BOT_TOKENS)):
-    if BOT_TOKENS[i]:
-        session = f"MK{i+1}"
-        clients.append(TelegramClient(session, API_ID, API_HASH))
+for idx, token in enumerate(BOT_TOKENS):
+    session = f"MK{idx + 1}"
+    client = TelegramClient(session, API_ID, API_HASH)
+    clients.append(client)
 
-# Usage:
+# Now you can do:
 # from config import clients, BOT_TOKENS
 # await clients[i].start(bot_token=BOT_TOKENS[i])
